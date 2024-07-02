@@ -29,21 +29,21 @@
 
     <!-- START Как работает сейчас -->
     <h2>Как работает сейчас <span class="badge text-bg-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Указанно в договоре и Total comission приходит как profit в фетчере">?</span></h2>
-    <div class="container p-3 mb-3 bg-primary-subtle rounded">
+    <div class="container p-3 mb-3 bg-primary-subtle rounded" data-section="now">
       <div class="row">
         <div class="col-12 col-md col input-group mb-3">
           <label class="input-group-text">Total comission</label>
-          <input class="form-control" aria-label="ttl-comission" id="ttl-comission" type="number" required>
+          <input class="form-control" aria-label="ttl-comission" id="ttl-comission_now" type="number" required>
           <span class="input-group-text">%</span>
         </div>
         <div class="col-12 col-md input-group mb-3">
           <label class="input-group-text">Affiliate comission</label>
-          <input class="form-control" aria-label="aflt-comission" id="aflt-comission" type="number" required>
+          <input class="form-control" aria-label="aflt-comission" id="aflt-comission_now" type="number" required>
           <span class="input-group-text">%</span>
         </div>
         <div class="col-12 col-md input-group mb-3">
           <label class="input-group-text">TP comission</label>
-          <input class="form-control" aria-label="tp-comission" id="tp-comission" disabled>
+          <input class="form-control" aria-label="tp-comission" id="tp-comission_now" disabled>
           <span class="input-group-text">%</span>
         </div>
       </div>
@@ -53,15 +53,15 @@
           <p class="m-1">Правило роялти по старой схеме</p>
           <div class="col-6 input-group mb-3">
             <label class="col-4 input-group-text">affiliate_royalty</label>
-            <input class="form-control" aria-label="old-aflt-royalty" id="old-aflt-royalty" disabled>
+            <input class="form-control" aria-label="old-aflt-royalty" id="old-aflt-royalty_now" disabled>
           </div>
           <div class="col input-group mb-3">
             <label class="col-4 input-group-text">base_profit</label>
-            <input class="form-control" aria-label="old-base-profit" id="old-base-profit" disabled>
+            <input class="form-control" aria-label="old-base-profit" id="old-base-profit_now" disabled>
           </div>
           <div class="col input-group mb-3">
             <label class="col-4 input-group-text">tp_affiliate_ratio</label>
-            <input class="form-control" aria-label="old-tp-aflt-ratio" id="old-tp-aflt-ratio" disabled>
+            <input class="form-control" aria-label="old-tp-aflt-ratio" id="old-tp-aflt-ratio_now" disabled>
           </div>
         </div>
 
@@ -69,15 +69,15 @@
           <p class="m-1">Правило роялти по новой схеме</p>
           <div class="col input-group mb-3">
             <label class="col-4 input-group-text">affiliate_royalty</label>
-            <input class="form-control" aria-label="new-aflt-royalty" id="new-aflt-royalty" disabled>
+            <input class="form-control" aria-label="new-aflt-royalty" id="new-aflt-royalty_now" disabled>
           </div>
           <div class="col input-group mb-3">
             <label class="col-4 input-group-text">base_profit</label>
-            <input class="form-control" aria-label="new-base-profit" id="new-base-profit" disabled>
+            <input class="form-control" aria-label="new-base-profit" id="new-base-profit_now" disabled>
           </div>
           <div class="col input-group mb-3">
             <label class="col-4 input-group-text">tp_affiliate_ratio</label>
-            <input class="form-control" aria-label="new-tp-aflt-ratio" id="new-tp-aflt-ratio" disabled>
+            <input class="form-control" aria-label="new-tp-aflt-ratio" id="new-tp-aflt-ratio_now" data-section="now" disabled>
           </div>
         </div>
       </div>
@@ -97,21 +97,21 @@
     <div class="tab-content" id="myTabContent">
       <!-- START Повышка на стороне TP -->
       <div class="tab-pane show active" id="tp-side-tab-pane" role="tabpanel" aria-labelledby="tp-side-tab" tabindex="0">
-        <div class="container bg-success-subtle p-3 mb-3 border border-top-0 rounded-bottom">
+        <div class="container bg-success-subtle p-3 mb-3 border border-top-0 rounded-bottom" data-section="tpside">
           <div class="row">
             <div class="col-12 col-md col input-group mb-3">
               <label class="input-group-text">Total comission</label>
-              <input class="form-control" aria-label="ttl-comission_inc" id="ttl-comission_inc" type="number" required>
+              <input class="form-control" aria-label="ttl-comission" id="ttl-comission_tpside" type="number" required>
               <span class="input-group-text">%</span>
             </div>
             <div class="col-12 col-md input-group mb-3">
               <label class="input-group-text">Affiliate comission</label>
-              <input class="form-control" aria-label="aflt-comission_inc" id="aflt-comission_inc" type="number" required>
+              <input class="form-control" aria-label="aflt-comission" id="aflt-comission_tpside" type="number" required>
               <span class="input-group-text">%</span>
             </div>
             <div class="col-12 col-md input-group mb-3">
               <label class="input-group-text">TP comission</label>
-              <input class="form-control" aria-label="tp-comission_inc" id="tp-comission_inc" disabled>
+              <input class="form-control" aria-label="tp-comission" id="tp-comission_tpside" disabled>
               <span class="input-group-text">%</span>
             </div>
           </div>
@@ -133,15 +133,15 @@
               <p class="m-1">Правило роялти по новой схеме</p>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">affiliate_royalty</label>
-                <input class="form-control" aria-label="new-aflt-royalty_inc" id="new-aflt-royalty_inc" disabled>
+                <input class="form-control" aria-label="new-aflt-royalty" id="new-aflt-royalty_tpside" disabled>
               </div>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">base_profit</label>
-                <input class="form-control" aria-label="new-base-profit_inc" id="new-base-profit_inc" disabled>
+                <input class="form-control" aria-label="new-base-profit" id="new-base-profit_tpside" disabled>
               </div>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">tp_affiliate_ratio</label>
-                <input class="form-control" aria-label="new-tp-aflt-ratio_inc" id="new-tp-aflt-ratio_inc" disabled>
+                <input class="form-control" aria-label="new-tp-aflt-ratio" id="new-tp-aflt-ratio_tpside" disabled>
               </div>
             </div>
           </div>
@@ -155,21 +155,21 @@
 
       <!-- START Повышка на стороне бренда -->
       <div class="tab-pane" id="brand-side-tab-pane" role="tabpanel" aria-labelledby="brand-side-tab" tabindex="0">
-        <div class="container bg-success-subtle p-3 mb-3 border border-top-0 rounded-bottom">
+        <div class="container bg-success-subtle p-3 mb-3 border border-top-0 rounded-bottom" data-section="brandside">
           <div class="row">
             <div class="col-12 col-md col input-group mb-3">
               <label class="input-group-text">Total comission</label>
-              <input class="form-control" aria-label="ttl-comission-brand_inc" id="ttl-comission-brand_inc" type="number" required>
+              <input class="form-control" aria-label="ttl-comission" id="ttl-comission_brandside" type="number" required>
               <span class="input-group-text">%</span>
             </div>
             <div class="col-12 col-md input-group mb-3">
               <label class="input-group-text">Affiliate comission</label>
-              <input class="form-control" aria-label="aflt-comission-brand_inc" id="aflt-comission-brand_inc" type="number" required>
+              <input class="form-control" aria-label="aflt-comission" id="aflt-comission_brandside" type="number" required>
               <span class="input-group-text">%</span>
             </div>
             <div class="col-12 col-md input-group mb-3">
               <label class="input-group-text">TP comission</label>
-              <input class="form-control" aria-label="tp-comission-brand_inc" id="tp-comission-brand_inc" disabled>
+              <input class="form-control" aria-label="tp-comission" id="tp-comission_brandside" disabled>
               <span class="input-group-text">%</span>
             </div>
           </div>
@@ -187,30 +187,30 @@
               <p class="m-1">Правило роялти по старой схеме</p>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">affiliate_royalty</label>
-                <input class="form-control" aria-label="old-aflt-royalty-brand_inc" id="old-aflt-royalty-brand_inc" disabled>
+                <input class="form-control" aria-label="old-aflt-royalty" id="old-aflt-royalty_brandside" disabled>
               </div>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">base_profit</label>
-                <input class="form-control" aria-label="old-base-profit-brand_inc" id="old-base-profit-brand_inc" disabled>
+                <input class="form-control" aria-label="old-base-profit" id="old-base-profit_brandside" disabled>
               </div>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">tp_affiliate_ratio</label>
-                <input class="form-control" aria-label="old-tp-aflt-ratio-brand_inc" id="old-tp-aflt-ratio-brand_inc" disabled>
+                <input class="form-control" aria-label="old-tp-aflt-ratio" id="old-tp-aflt-ratio_brandside" disabled>
               </div>
             </div>
             <div class="col-12 col-sm">
               <p class="m-1">Правило роялти по новой схеме</p>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">affiliate_royalty</label>
-                <input class="form-control" aria-label="new-aflt-royalty-brand_inc" id="new-aflt-royalty-brand_inc" disabled>
+                <input class="form-control" aria-label="new-aflt-royalty" id="new-aflt-royalty_brandside" disabled>
               </div>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">base_profit</label>
-                <input class="form-control" aria-label="new-base-profit-brand_inc" id="new-base-profit-brand_inc" disabled>
+                <input class="form-control" aria-label="new-base-profit" id="new-base-profit_brandside" disabled>
               </div>
               <div class="col input-group mb-3">
                 <label class="col-4 input-group-text">tp_affiliate_ratio</label>
-                <input class="form-control" aria-label="new-tp-aflt-ratio_inc" id="new-tp-aflt-ratio-brand_inc" disabled>
+                <input class="form-control" aria-label="new-tp-aflt" id="new-tp-aflt-ratio_brandside" disabled>
               </div>
             </div>
           </div>
